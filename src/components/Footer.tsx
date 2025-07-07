@@ -6,7 +6,7 @@ const Footer = () => {
         {/* Left side - Name and title */}
         <div className="text-center md:text-left">
           <h3 className="text-2xl font-bold text-white mb-2">NOUR ELDIN</h3>
-          <p className="text-gray-300 text-lg">Full Stack Developer</p>
+          <p className="text-gray-300 text-lg">Frontend Developer</p>
         </div>
 
         {/* Right side - Social links */}
