@@ -88,9 +88,7 @@ const ContactSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href="mailto:alex@example.com" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">noureldimahmoud02@example.com</a>
             <span className="hidden sm:block text-gray-600">•</span>
-            <a href="tel:+1234567890" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">
-              +1 (234) 567-8890
-            </a>
+            <a href="tel:+1234567890" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">+20 10 0885 6582</a>
           </div>
         </div>
       </div>
