@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import ExperienceTimeline from '../components/ExperienceTimeline';
 import ProjectSection from '../components/ProjectSection';
 import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <ExperienceTimeline />
       <ProjectSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 };
