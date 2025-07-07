@@ -1,7 +1,5 @@
-
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,30 +7,28 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     console.log('Form submitted:', formData);
     toast.success('Message sent successfully! I\'ll get back to you soon.');
-    
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
     setIsSubmitting(false);
   };
-
-  return (
-    <section id="contact" className="py-20 px-4 bg-slate-900">
+  return <section id="contact" className="py-20 px-4 bg-slate-900">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black mb-4">
@@ -54,16 +50,7 @@ const ContactSection = () => {
                 <label htmlFor="name" className="block text-white font-semibold mb-2">
                   Name
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
-                  placeholder="Your name"
-                />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" placeholder="Your name" />
               </div>
 
               {/* Email Input */}
@@ -71,16 +58,7 @@ const ContactSection = () => {
                 <label htmlFor="email" className="block text-white font-semibold mb-2">
                   Email
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
-                  placeholder="your.email@example.com"
-                />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" placeholder="your.email@example.com" />
               </div>
             </div>
 
@@ -89,25 +67,12 @@ const ContactSection = () => {
               <label htmlFor="message" className="block text-white font-semibold mb-2">
                 Message
               </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 resize-none"
-                placeholder="Tell me about your project..."
-              />
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 resize-none" placeholder="Tell me about your project..." />
             </div>
 
             {/* Submit Button */}
             <div className="text-center">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+              <button type="submit" disabled={isSubmitting} className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed">
                 <span className="relative z-10">
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </span>
@@ -121,24 +86,14 @@ const ContactSection = () => {
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Or reach out directly:</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href="mailto:alex@example.com"
-              className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-            >
-              alex@example.com
-            </a>
+            <a href="mailto:alex@example.com" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">noureldimahmoud02@example.com</a>
             <span className="hidden sm:block text-gray-600">•</span>
-            <a
-              href="tel:+1234567890"
-              className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-            >
+            <a href="tel:+1234567890" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">
               +1 (234) 567-8890
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
