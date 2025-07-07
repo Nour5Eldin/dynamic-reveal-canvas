@@ -31,9 +31,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-white text-xl md:text-2xl lg:text-3xl font-bold mb-4">
-          Full Stack Developer
-        </p>
+        <p className="text-white text-xl md:text-2xl lg:text-3xl font-bold mb-4">Frontend Developer</p>
 
         {/* Description */}
         <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
