@@ -4,6 +4,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    companyRole: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,6 +25,7 @@ const ContactSection = () => {
     setFormData({
       name: '',
       email: '',
+      companyRole: '',
       message: ''
     });
     setIsSubmitting(false);
@@ -60,6 +62,14 @@ const ContactSection = () => {
                 </label>
                 <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" placeholder="your.email@example.com" />
               </div>
+          </div>{/* Company/Role Input */}
+          <div className="group md:col-span-2">
+                <label htmlFor="companyRole" className="block text-white font-semibold mb-2">
+                  Company / Role
+                </label>
+            <input type="text" id="companyRole" name="companyRole" value={formData.companyRole} onChange={handleChange} required
+            className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+ placeholder="Company name or role (e.g. HR, CTO, etc.)"/>
             </div>
 
             {/* Message Input */}
