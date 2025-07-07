@@ -1,20 +1,19 @@
-
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToExperience = () => {
     const experienceSection = document.getElementById('experience');
-    experienceSection?.scrollIntoView({ behavior: 'smooth' });
+    experienceSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+  return <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
       
@@ -28,9 +27,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto">
         {/* Main Name with Gradient */}
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-6 leading-none">
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">
-            Alex Rivera
-          </span>
+          <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">NOUR ELDIN</span>
         </h1>
 
         {/* Subtitle */}
@@ -46,10 +43,7 @@ const HeroSection = () => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button 
-            onClick={scrollToExperience}
-            className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-          >
+          <button onClick={scrollToExperience} className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
             <span className="relative z-10 flex items-center gap-2">
               View My Work
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
@@ -57,10 +51,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
 
-          <button 
-            onClick={scrollToContact}
-            className="group px-8 py-4 border-2 border-purple-500 text-white font-semibold rounded-full transition-all duration-300 hover:bg-purple-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-          >
+          <button onClick={scrollToContact} className="group px-8 py-4 border-2 border-purple-500 text-white font-semibold rounded-full transition-all duration-300 hover:bg-purple-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
             Contact Me
           </button>
         </div>
@@ -72,8 +63,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
